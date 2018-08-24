@@ -66,7 +66,7 @@ int main()
 
     promneg=(float)sumneg/numerosneg;
     prompos=(float)sumpos/numerospos;
-    difnegpos=sumpos-(sumneg);
+    difnegpos=sumpos+sumneg;
     printf("\nla suma de los numeros positivos es: %d", sumpos);
     printf("\nla suma de los numeros negativos es: %d", sumneg);
     printf("\nla cantidad de numeros positivos es: %d", numerospos);
@@ -76,6 +76,8 @@ int main()
     printf("\nla cantidad de ceros es: %d",cantceros);
     printf("\nla cantidad de numeros pares es: %d", cantpares);
     printf("\nla diferencia entre los numeros positivos y negativos  es: %d", difnegpos);
+    printf("\nel numero maximo es: %d", maximo);
+    printf("\nel numero minimo es: %d", minimo);
 
 
     return 0;
