@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define T 3
-
+#include "Funciones.h"
 /*a)Cargar los datos (carga aleatoria)
 b)Modificar: Se ingresa el legajo, lo busca y si lo encuentra modifica la nota 1
 c)Informes:
@@ -21,9 +21,7 @@ c)Informes:
                   19-25(Inclusive)
                   26 o mas
 */
-float calcularPromedio(int, int, int);
-int cargarAlumnos(char[][50], int[],int[],int[],float[],int);
-int mostrarAlumnos(char[][50], int[],int[],int[],float[],int);
+
 
 int main()
 {
@@ -47,38 +45,3 @@ int main()
 
     return 0;
 }
-
-
-float calcularPromedio(int nota1, int nota2, int nota3)
-{
-    float promedio;
-
-    promedio=(float)(nota1+nota2+nota3/3);
-
-    return promedio;
-}
-
-int cargarAlumnos(char nombreCompleto[][50], int nota1[],int nota2[],int nota3[],float promedio[],int tam)
-{
-    int i;
-
-    for(i=0; i<T; i++)
-    {
-        printf("Ingrese su nombre completo: ");
-        fflush(stdin);
-        gets(nombreCompleto[i]);
-        printf("Ingrese la nota 1: ");
-        scanf("%d",&nota1[i]);
-        printf("Ingrese la nota 2: ");
-        scanf("%d",&nota2[i]);
-        printf("Ingrese la nota 3: ");
-        scanf("%d",&nota3[i]);
-
-        promedio[i]=calcularPromedio(nota1[i],nota2[i],nota3[i]);
-
-    }
-
-    return 0;
-}
-
-
