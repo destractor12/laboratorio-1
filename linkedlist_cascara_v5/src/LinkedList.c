@@ -35,9 +35,14 @@ int ll_len(LinkedList* this)
 {
     int returnAux = 0;
 
+
     if(this==NULL)
     {
         returnAux = -1;
+    }
+    else
+    {
+        returnAux=this->size;
     }
     return returnAux;
 }
@@ -54,6 +59,18 @@ int ll_len(LinkedList* this)
 static Node* getNode(LinkedList* this, int nodeIndex)
 {
     Node* pNode = NULL;
+
+    LinkedList lista;
+    lista = this;
+
+    pNode = lista->pFirstNode
+
+    if(this==NULL)
+    {
+        return pNode;
+    }
+
+    pNode=nodeIndex;
 
     return pNode;
 }
